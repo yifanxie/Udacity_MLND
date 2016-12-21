@@ -1,0 +1,6 @@
+Changes performed since previous submission:
+
+Analyzing Model Performance(Question 4): Added discussion on initial trend of the training curve.
+
+Evaluating Model Performance(Question 7):  Added details discussion more on how gridsearch is performed to test hyper-parameters
+
