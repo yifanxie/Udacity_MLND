@@ -1,0 +1,2 @@
+git remote add origin https://github.com/yifanxie/Udacity_MLND.git
+git push -u origin master
