@@ -1,0 +1,18 @@
+Dear Reviewer:
+
+The path to the submission file in the repo is in the following: https://github.com/yifanxie/Udacity_MLND/tree/master/projects/finding_donors/submission
+
+
+Issues and Changes from the first review:
+
+- Data Exploration: 
+	-- issue:  incorrect calculation of 'greater_percent'
+	-- change: correction made to the calculation
+
+- Initial Model Evaluation: 
+	-- issue: did not set a random_state value for each classifier for reproducible result
+	-- change: a random_state value is now used when each classifier is initialised
+
+- Question 4 - Describing the Model in Layman's Terms
+	-- issue: missing the discussion about how the base learner (decision tree) works 
+	-- change: add introduction on how a decision tree work.

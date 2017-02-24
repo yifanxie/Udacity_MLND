@@ -1,0 +1,228 @@
+1
+00:00:00,190 --> 00:00:02,500
+And we'll do that with a clustering properties quiz.
+
+2
+00:00:02,500 --> 00:00:03,771
+>> Oh yeah.
+
+3
+00:00:03,771 --> 00:00:05,486
+>> All right, so what I'm going to do, is I'm
+
+4
+00:00:05,486 --> 00:00:08,680
+going to give you three different clustering algorithms. For each one,
+
+5
+00:00:08,680 --> 00:00:12,000
+ask whether it has these properties. Does it have richness?
+
+6
+00:00:12,000 --> 00:00:15,630
+Does it have scale-invariance? Does it have consistency? And so
+
+7
+00:00:15,630 --> 00:00:17,860
+the algorithms are all going to be variations of the first
+
+8
+00:00:17,860 --> 00:00:21,150
+clustering algorithm we talked about, single-link clustering. And so, what
+
+9
+00:00:21,150 --> 00:00:23,340
+we're going to do is we're going to run single link clustering,
+
+10
+00:00:23,340 --> 00:00:26,060
+but to make it a clustering algorithm we have to decide
+
+11
+00:00:26,060 --> 00:00:27,870
+under what conditions are we going to stop
+
+12
+00:00:27,870 --> 00:00:31,035
+building our clusters? And I've got three different conditions,
+
+13
+00:00:31,035 --> 00:00:32,790
+then that defines our three different algorithms. So
+
+14
+00:00:32,790 --> 00:00:36,760
+one is, we've got n items that we're clustering.
+
+15
+00:00:36,760 --> 00:00:38,150
+I'm going to stop when I've got n over
+
+16
+00:00:38,150 --> 00:00:41,000
+2 clusters. 'Kay? So just keep merging, keep building
+
+17
+00:00:41,000 --> 00:00:43,540
+clusters until you've reached n over 2 clusters, and
+
+18
+00:00:43,540 --> 00:00:45,430
+at that point, stop and return what you've got.
+
+19
+00:00:45,430 --> 00:00:46,666
+>> Okay.
+
+20
+00:00:46,666 --> 00:00:47,530
+>> Does that, does that make sense?
+
+21
+00:00:47,530 --> 00:00:47,892
+>> Yes.
+
+22
+00:00:47,892 --> 00:00:51,170
+>> All right, and you remember enough about single-link clustering for that
+
+23
+00:00:51,170 --> 00:00:53,410
+to be meaningful, but that's, it's where were
+
+24
+00:00:53,410 --> 00:00:55,820
+going to start off with everything in its own
+
+25
+00:00:55,820 --> 00:00:59,450
+cluster, and then merge them together by whatever
+
+26
+00:00:59,450 --> 00:01:02,860
+two clusters are closest together, and then iterate.
+
+27
+00:01:02,860 --> 00:01:03,350
+>> Yes.
+
+28
+00:01:03,350 --> 00:01:06,540
+>> Okay. All right, so that's algorithm one.
+
+29
+00:01:06,540 --> 00:01:08,060
+We're going to stop at n over 2 clusters. The
+
+30
+00:01:08,060 --> 00:01:11,040
+second one is we're going to have some parameter
+
+31
+00:01:11,040 --> 00:01:16,770
+theta, and we're going to keep merging clusters until we'd
+
+32
+00:01:16,770 --> 00:01:18,700
+have to merge clusters that are theta
+
+33
+00:01:18,700 --> 00:01:21,860
+units apart. And once they're theta units apart,
+
+34
+00:01:21,860 --> 00:01:23,290
+we're going to say, nope, that's too far to
+
+35
+00:01:23,290 --> 00:01:24,700
+be part of the same cluster. We're done.
+
+36
+00:01:24,700 --> 00:01:25,190
+>> Okay.
+
+37
+00:01:25,190 --> 00:01:28,070
+>> Okay? So that, again, it's a clustering algorithm, right? It's
+
+38
+00:01:28,070 --> 00:01:30,310
+going to take these distances, and it's going to turn it into groups.
+
+39
+00:01:30,310 --> 00:01:32,780
+>> So that's like, only things that are within
+
+40
+00:01:32,780 --> 00:01:34,570
+ten feet of each other could possibly be clusters.
+
+41
+00:01:36,040 --> 00:01:36,480
+>> Exactly.
+
+42
+00:01:36,480 --> 00:01:36,690
+>> Okay.
+
+43
+00:01:36,690 --> 00:01:39,550
+>> Right. Theta is going to define that. And the
+
+44
+00:01:39,550 --> 00:01:42,060
+last one is very, very similar. We're going to keep
+
+45
+00:01:42,060 --> 00:01:45,140
+doing clusters until we'd have to merge clusters that
+
+46
+00:01:45,140 --> 00:01:49,610
+are farther than theta over omega units apart. And omega
+
+47
+00:01:49,610 --> 00:01:50,970
+in this case is going to be defined to
+
+48
+00:01:50,970 --> 00:01:55,440
+be the largest pair-wise distance over the entire data set.
+
+49
+00:01:55,440 --> 00:01:55,970
+>> That's an omega?
+
+50
+00:01:55,970 --> 00:01:57,540
+>> Yes.
+
+51
+00:01:57,540 --> 00:01:59,232
+>> Okay.
+
+52
+00:01:59,232 --> 00:02:02,364
+>> And that's a capital D, at least now it is.
+
+53
+00:02:02,364 --> 00:02:04,524
+>> [LAUGH] Okay.
+
+54
+00:02:04,524 --> 00:02:07,050
+>> All right, good? So if you understand these algorithms, what,
+
+55
+00:02:07,050 --> 00:02:09,955
+what I'd like you to do is say which of these have the
+
+56
+00:02:09,955 --> 00:02:11,200
+richness property, which of them have
+
+57
+00:02:11,200 --> 00:02:13,250
+scaling variants, which of them have consistency.
+
