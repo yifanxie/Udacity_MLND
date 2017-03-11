@@ -4,12 +4,13 @@ Reviewer 1's comment & Improvements made
 
 Question 2:  What's missing in your answer to Question 2 is your interpretation of these results. Which features are relevant to identify customers' spending habits, and which might be removed from the data set? (You can discuss a single feature if you prefer.)
 
-Improvement:  Add discussion to identify the three features thare are considered to be strong relevant to customers' spending habit
-
+Improvement:  Add discussion to identify the three features that are considered to be strongly relevant to customers' spending habit
 
 
 Question 3: make sure to mention if the correlations identified in the scatter matrix (one of which you had already identified from your previous investigation of the data set) confirm or deny your analysis of a feature's relevance to identify customers' spending habits.
 
-
+Improvement: Add a heatmap to display all the pair-wise correlation between features. In the answer, strong correlations between features are identified. statements are added to confirm feature relevance to customer spending habits.
 
 Question 5: make sure to also discuss what each principal component might mean in terms of customer spending in general. Which type of customer would you expect to present a high (positive or negative) value for each principal component?
+
+Improvement: For the discussion for each principal component, discussion is added to address which type of customer who might present high value for the related principal components
