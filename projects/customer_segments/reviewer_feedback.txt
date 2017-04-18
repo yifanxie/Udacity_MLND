@@ -1,3 +1,7 @@
+Dear Reviewer:
+
+The submission to the customer_segments project is in the following link:
+https://github.com/yifanxie/Udacity_MLND/tree/master/projects/customer_segments/submission
 
 
 Reviewer 1's comment & Improvements made
