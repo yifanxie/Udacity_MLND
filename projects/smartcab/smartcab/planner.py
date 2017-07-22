@@ -12,7 +12,6 @@ class RoutePlanner(object):
         """ Select the destination if one is provided, otherwise choose a random intersection. """
 
         self.destination = destination if destination is not None else random.choice(self.env.intersections.keys())
-
     def next_waypoint(self):
         """ Creates the next waypoint based on current heading, location,
             intended destination and L1 distance from destination. """
