@@ -28,7 +28,7 @@ class LearningAgent(Agent):
         self.current_trial = 0
         self.num_random_action=0
         self.num_Q_action=0
-        self.learning_rate=0.001
+        self.decay_factor=0.0005
         ###########
         ## TO DO ##
         ###########
@@ -55,13 +55,14 @@ class LearningAgent(Agent):
         else:
             self.current_trial+=1
             print('current trial is {}'.format(self.current_trial))
-            if self.epsilon>=0:
-                # self.epsilon=self.epsilon-0.001
-                # self.epsilon=self.learning_rate**self.current_trial
-                # self.epsilon=np.exp(-self.learning_rate*self.current_trial)
-                self.epsilon=np.cos(self.learning_rate*self.current_trial)
-                print('epsilon is {:.5}'.format(self.epsilon))
-
+            if self.learning:
+                if self.epsilon>=0:
+                    self.epsilon=self.epsilon-0.05
+                    # self.epsilon=self.decay_factor**self.current_trial
+                    # self.epsilon=np.exp(-self.decay_factor*self.current_trial)
+                    # self.epsilon=np.cos(self.decay_factor*self.current_trial)
+                    if self.epsilon<0.000001: self.epsilon=0.0001
+                    print('epsilon is {:.5}'.format(self.epsilon))
         return None
 
     def build_state(self):
@@ -233,7 +234,7 @@ def run():
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
     # sim = Simulator(env, update_delay=2, log_metrics=True, display=True)
-    sim = Simulator(env, update_delay=0.01, log_metrics=True, display=False, optimized=True)
+    sim = Simulator(env, update_delay=0.01, log_metrics=True, display=False, optimized=False)
 
     ##############
     # Run the simulator
@@ -249,4 +250,4 @@ if __name__ == '__main__':
     print('number of trial runs is {}'.format(agent.current_trial))
     print('number of states is {}'.format(len(agent.Q)))
     print('number of random actions is {}'.format(agent.num_random_action))
-    print('number of actions based on Q-vale is {}'.format(agent.num_Q_action))
+    print('number of actions based on Q-value is {}'.format(agent.num_Q_action))
